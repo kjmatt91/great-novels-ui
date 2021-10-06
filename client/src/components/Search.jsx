@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import Axios from 'axios'
 
 const Search = () => {
     const [searchTerm, setSearchTerm] = useState('')
@@ -9,7 +9,7 @@ const Search = () => {
     }, [])
 
     const fetchNovels = async () => {
-        const { data } = await axios.get('http://localhost:1337/api/novels')
+        const { data } = await Axios.get('http://localhost:1337/api/novels')
         setNovels(data)
     }
 
